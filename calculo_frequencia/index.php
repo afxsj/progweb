@@ -1,3 +1,31 @@
+<?php
+if(isset($_GET["enviar"])){
+$txtnome=$_GET["txt-nome"];
+$txtcurso=$_GET["txt-curso"];
+$txtcargahoraria=$_GET["txt-carga-horaria"];
+$txtcargadia=$_GET["txt-carga-dia"];
+$txtfrequencia=$_GET["txt-frequencia"];
+
+
+$diastotaisdocurso= $txtcargahoraria/ $txtcargadia ;
+$qtddefaltasemdia= $diastotaisdocurso* ($txtfrequencia/100);
+
+$frase= "Olá ".$txtnome .", bem vinds ao curso ".$txtcurso.", a carga horária total deste curso";
+$frase.=" é de ".$txtcargahoraria." horas. A carga horária por dia é de ".$txtcargadia." horas, o que ";
+$frase.= " equivale a ".$diastotaisdocurso." dias de curso no total. A frequência obrigatória";
+$frase.=" é de ".$txtfrequencia. " %, ou seja ,você poderá faltar no total de ".$qtddefaltasemdia." dias.";
+
+
+}else{
+
+    //Frase no caso do formulário nao ter sido prenechido
+    $frase="Informe os dados no formulário acima";
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,38 +47,39 @@
     <section>
         <div class="container">
             <h1>Cálculo de Frequência</h1>
-            <form action="" id="formulario" method="GET">
+            <form action="#" id="formulario" method="GET">
+
                 <label for="">Nome Completo</label>
                 <input type="text" id="txt-nome" name="txt-nome" size="70">
 
                 <label for="">Curso</label>
-                <input type="text" id="txt-curso" name="txt-curso"-size="60">
+                <input type="text" id="txt-curso" name="txt-curso"-size="10">
+
+                <label for="">Carga horaria do curso</label>
+                <input type="text" id="txt-carga horaria " name="txt-carga-horaria"-size="10">
 
                 
                 <label for="">Carga Horária Diária</label>
-                <input type="text" id="txt-carga-dia" name="txt-horaria"-size="10">
+                <input type="text" id="txt-carga-dia" name="txt-carga-dia"-size="10">
 
                 
                 <label for="">Frequência Obrigatória(%)</label>
-                <input type="text" id="txt-frequencia" name="txt-frequencia"-size="60" placeholder="Digite o valor ">
+                <input type="text" id="txt-frequencia" name="txt-frequencia"-size="10" placeholder="Digite o valor ">
                 <br>
-                <input type="submit" value="Calcular">
+                <input type="submit"  name ="enviar" value="Calcular">
 
                <br><br>
-                <span class="resultado"></span>
-                <span class="resultado"></span>
-                <span class="resultado"></span>
-
+                <span class="resultado">
+                <?php echo $frase;?>
+              
+                </span>
+               
 
 
             </form>
 
-            <?php
-            if(isset($_GET["txt-carga-horaria"]))
-            {
-
-            }
-            ?>
+            
+            
         </div>
     </section>
 
