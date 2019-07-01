@@ -1,5 +1,5 @@
 <?php
-//Switch- uma estrtura de opção-um teste
+//Switch- uma estrtura de opção-um teste, tem toda as opções em vista e preciso escolher uma 
 // o eco normalmente nao faz parte da condição prescrista
 
 $fruta="maçã";
