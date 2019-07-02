@@ -57,6 +57,7 @@ if(isset($_POST["submit"])){
                 <tr>
                     <th>Parcela</th>
                     <th>Valor</th>
+                    <th>Pagamento</th>
                     
                 </tr>
                 <?php
@@ -65,7 +66,8 @@ if(isset($_POST["submit"])){
                 <tr>
                     <td> <?php echo $x;?>Parcela</td>
                     <td><?php echo $valorparcela;?></td>
-                    <td></td>
+
+                    <td><?php echo date('d/m/Y', mktime(0,0,0,date('m')+$x,1, date('Y')));?></td>
                 </tr>
                 <?php
                    }
@@ -74,6 +76,8 @@ if(isset($_POST["submit"])){
             
         </table>
         <h3>Valor final: <?php echo $montante;?></h3>
+        <!-- mktime=criar um tempo e criar horas -->
+        <!--<h4>Primeira parcela:<?php echo date('d/m/Y', mktime(0,0,0,date('m')+1,1, date('Y')));?></h4>-->
          </div>
         <?php
         }
