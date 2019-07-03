@@ -1,24 +1,25 @@
 <?php
 //if simples
 if(isset($_POST["submit"])){
-    $servidor= $_POST["categoria"];
+    $categoria= $_POST["categoria"];
     switch($categoria){
+        // sempre a primeira posição é a posição 0
         case 1:
         $produtos=array(
-         Array("nome"=>"Jaleco Lord","valor"=>"210","ativo" => true),
-         Array("tipo"=>"Jaleco Veneto", "valor"=>240,"ativo"=>false),
+         array("nome"=>"Jaleco Lord","valor"=>"210","ativo" => true),
+         array("nome"=>"Jaleco Veneto", "valor"=>240,"ativo"=>false),
         );
         break;
 
         case 2:
         $produtos=array(
-        Array("nome"=>"Jaleco Duquesa","valor"=>210,"ativo" => true),
-        Array("tipo"=>"Jaleco Condessa", "valor"=>240,"ativo"=>false),
-        Array("tipo"=>"Jaleco Basic", "valor"=>190,"ativo"=>true),
+        array("nome"=>"Jaleco Duquesa","valor"=>210,"ativo" => true),
+        array("nome"=>"Jaleco Condessa", "valor"=>240,"ativo"=>false),
+        array("nome"=>"Jaleco Basic", "valor"=>190,"ativo"=>true),
         );
         break;
-        case 3;
-        $produtos=null;
+        case 3:
+        $produtos=array();
         break;
     }
 }
@@ -49,16 +50,23 @@ if(isset($_POST["submit"])){
      </form>
     </div>
 
-    <div id="resultado"</div>
+    <?php
+    if(isset($_POST["submit"])){
+        ?>
+
+    <div id="resultado">
+    <?php
+    $linha=0;
+    while($linha<count($produtos)){
+        echo "Nome:" .$produtos[$linha]["nome"]."<br>";
+    $linha++;   
+ }
+ ?>
+    
+    </div>
+    <?php
     }
-
-
-
-
-
-
-
-
+    ?>
     
     
 </body>
