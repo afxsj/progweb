@@ -5,12 +5,12 @@ $qtditens = 0;
 
 $carrinho=array(
     array("produto"=>"Banana","valor"=>7.56,"qtd" => 3),
-    array("produto"=>"Contra Filé", "valor"=>12.49,"qtd"=>4),
-    array("produto"=>"Maçã", "valor"=>6.78,"qtd"=>2),
-    array("produto"=>"Bolacha Bono doce de Leite", "valor"=>2.14,"qtd"=>3),
-    array("produto"=>"Arroz-5kg", "valor"=>11.75,"qtd"=>1),
-    array("produto"=>"Macarrão", "valor"=>2.65,"qtd"=>3),
-    array("produto"=>"Papel Higiênico", "valor"=>11.75,"qtd"=>2),
+    array("produto"=>"Contra Filé", "valor"=>12.49,"qtd"=>2),
+    array("produto"=>"Maçã", "valor"=>6.78,"qtd"=>3),
+    array("produto"=>"Bolacha Bono doce de Leite", "valor"=>2.14,"qtd"=>4),
+    array("produto"=>"Arroz-5kg", "valor"=>11.75,"qtd"=>2),
+    array("produto"=>"Macarrão", "valor"=>2.65,"qtd"=>5),
+    array("produto"=>"Papel Higiênico", "valor"=>11.75,"qtd"=>6),
 
 );
 ?>
@@ -40,13 +40,13 @@ $carrinho=array(
                 <th>Sub Total</th>
             </tr>
         <?php
-        $itens=0;
         do{
             $subtotal=($carrinho[$itens]["qtd"]*$carrinho[$itens]["valor"]);
-            echo "<tr>";
-            echo "<td>" .$carrinho[$itens]["produto"]."<?td>";
-            echo "<td>" .$carrinho[$itens]["valor"]."<?td>";
-            echo "<td>" .$carrinho[$itens]["qtd "]."<?td>";
+            ($carrinho[$itens]["qtd"]>1?$cor="#f00" : $cor="#000");
+            echo "<tr style='color:".$cor="'>";
+            echo "<td>" .$carrinho[$itens]["produto"]."</td>";
+            echo "<td>" .$carrinho[$itens]["valor"]."</td>";
+            echo "<td>" .$carrinho[$itens]["qtd"]."</td>";
             echo "<td>" .($subtotal)."</td>";
         echo "</tr>";
         $soma += $subtotal;
