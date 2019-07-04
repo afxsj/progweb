@@ -1,16 +1,18 @@
+
 <?php
+// pelo menos tenho que fazer uma vez o processo e até acabr oq foi proposto
 $itens = 0;
 $soma = 0;
 $qtditens = 0;
 
 $carrinho=array(
-    array("produto"=>"Banana","valor"=>7.56,"qtd" => 3),
-    array("produto"=>"Contra Filé", "valor"=>12.49,"qtd"=>2),
-    array("produto"=>"Maçã", "valor"=>6.78,"qtd"=>3),
-    array("produto"=>"Bolacha Bono doce de Leite", "valor"=>2.14,"qtd"=>4),
-    array("produto"=>"Arroz-5kg", "valor"=>11.75,"qtd"=>2),
-    array("produto"=>"Macarrão", "valor"=>2.65,"qtd"=>5),
-    array("produto"=>"Papel Higiênico", "valor"=>11.75,"qtd"=>6),
+    array("produto"=>"Banana","valor"=>7.56,"qtd" => 2),
+    array("produto"=>"Contra Filé", "valor"=>12.49,"qtd"=>1),
+    array("produto"=>"Maçã", "valor"=>6.78,"qtd"=>1),
+    array("produto"=>"Bolacha Bono doce de Leite", "valor"=>2.14,"qtd"=>2),
+    array("produto"=>"Arroz-5kg", "valor"=>11.75,"qtd"=>3),
+    array("produto"=>"Macarrão", "valor"=>2.65,"qtd"=>4),
+    array("produto"=>"Papel Higiênico", "valor"=>11.75,"qtd"=>3),
 
 );
 ?>
