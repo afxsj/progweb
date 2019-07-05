@@ -1,41 +1,46 @@
 <?php
-//if simples
+//if simples 
+/* primeiro o html, depois php fazendo teste do if if(isset($_GET["submit"])){
+    fazer um swithc seraia a variavel ,depois montar os ecos 
+    
+    
+    
+    */
 if(isset($_GET["submit"])){
-    $horario= $_GET["diasemana"];
+    $diasemana= $_GET["diasemana"];
     // todas as cases tem que ter sua unica variavel podendo mudar so os seus valores e pode ter feiot tudo array sobre array
 
-    switch($horario){
+    switch($diasemana){
     
         case 1:
-        $horario=array(
+        $programa=array(
+        $dia= "domingo";
          array("nome"=>"jornal das 7","hora"=>"7.00","class" => "livre"),
          array("nome"=>"tv globinho", "hora"=>"9.00","class"=>"livre"),
         );
         break;
 
         case 2:
-        $horario=array(
-         array("nome"=>"jornal das 7","hora"=>"7.00","class" => "livre"),
-         array("nome"=>"tv globinho", "hora"=>"9.00","class"=>"livre"),
+        $programa=array(
+         array("nome"=>"Encontro","hora"=>"10.00","class" => "livre"),
+         array("nome"=>"EPTV", "hora"=>"12.00","class"=>"livre"),
         );
         break;
         
 
-            case 3:
-            $p1= array("tipo"=>"Avenida Brasil","hora"=>"19 horas","class"=>"17 anos");
-            $p2= array("tipo"=>"Jornal das 23","hora"=>"23 horas","class"=>"livre");
-            
-            break;
-
-            case 4:
-            $p1= array("tipo"=>"Plantão Médico","hora"=>"10 horas","class");
-            $p2= array("tipo"=>"Tv.globinho","hora"=>"9 horas","class"=>"livre");
-            
-            break;
-
-           
-
-
+        case 3:
+        $programa=array(
+         array("nome"=>"Clips","hora"=>"11.00","class" => "livre"),
+         array("nome"=>"Jornal Hoje", "hora"=>"12.30.","class"=>"livre"),
+        );
+        break;
+        
+        case 4:
+        $programa=array(
+         array("nome"=>"Telecurso","hora"=>"6.00","class" => "livre"),
+         array("nome"=>"Tv globinho", "hora"=>"08.30.","class"=>"livre"),
+        );
+        break;
 
         }
 
@@ -76,15 +81,15 @@ if(isset($_GET["submit"])){
 
   ?>
 
-    <div id="Resultado"</div><h1>Tabela de preços</h1>
+    <div id="Resultado"</div><h1>Tabela</h1>
     <table border="2">
        
 
    
     <?php
     $linha=0;
-    while($linha<count($horario)){
-        echo "Nome:" .$horario[$linha]["nome"]."<br>";
+    while($linha<count($diasemana)){
+        echo "Nome:" .$diasemana[$linha]["nome"]."<br>";
     $linha++;   
  }
  ?>
