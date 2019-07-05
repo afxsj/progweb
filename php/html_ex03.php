@@ -1,6 +1,7 @@
 <?php
 if(isset($_GET["submit"])){
     $pontos=$_GET["pontos"];
+    $recompensa="aaa";
     //if com else
     if($pontos< 50){
       $menor="Sem direito a recompensas";
