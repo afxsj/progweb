@@ -52,7 +52,7 @@ if($valor % 2 == 0){
     echo "par";
 } else {
     echo "impar";
-}
+}//fatorial sempre n=ao valor ditado ex 5=ditado e n=ao proximo que é 5 depois 4 e assim por diante 
 ?>
 
 </div>
