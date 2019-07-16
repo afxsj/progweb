@@ -13,7 +13,13 @@
     <div class="wrapper">
         <ul>
             <li class="bullhorn"><i class="fa fa-bullhorn fa-5x" aria-hidden="true"></i></li>
-            <li class="git"><i class="fa fa-gift fa-5x" aria-hidden="true"></i></li>
+            <li class="gift"><i class="fa fa-gift fa-5x" aria-hidden="true"></i></li>
+            <li class="bible"><i class="fa fa-bible fa-5x" aria-hidden="true"></i></li>
+            <li class="cat"><i class="fa fa-cat fa-5x" aria-hidden="true"></i></li> 
+            <li class="fedex"><i class="fab fa-fedex fa-5x" aria-hidden="true"></i></li>
+        
+
+
         </ul>
     </div>
 
