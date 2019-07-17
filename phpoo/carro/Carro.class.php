@@ -1,5 +1,5 @@
 <?php
- class Carro{
+  abstract class Carro{
 
 
     //Atributos
@@ -13,6 +13,25 @@
 
     //Metodos
     //Comportamento de ação
+    function __construct($p1,$p2,$p3,$p4,$p5,$p6,$p7){
+    echo "Criando o Carro<br>";
+    $this->setMarca($p1);
+    $this->setAnoDeFabricacao($p2);
+    $this->setModelo($p3);
+    $this->setCor($p4);
+    $this->setligado($p5);
+    $this->setVelocidade($p6);
+    $this->setVelocidadeMaxima($p7);
+
+
+    echo "Marca:" .$this->getmarca()."<br>";
+    echo "Fabricação:" .$this->getanodefabricacao()."<br>";
+    echo "Modelo:" .$this->getModelo()."<br>";
+    echo "Cor:" .$this->getcor()."<br>";
+    echo "Ligado:" .$this->getligado()."<br>";
+    echo "Velocidade:" .$this->getvelocidade()."<br>";
+    echo "Velocidade Máxima:" .$this->getvelocidademaxima()."<br>";
+    }
 
 
     //getters
@@ -38,6 +57,12 @@
     public function getligado(){
         return $this->ligado;
 
+    }
+    public function getvelocidade(){
+        return $this->velocidade;
+    }
+    public function getvelocidademaxima(){
+        return $this->velocidademaxima;
     }
 
     //seters
