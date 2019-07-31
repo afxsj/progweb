@@ -1,12 +1,13 @@
 body{
     margin: 0px;
+   background-color: lightcyan
 }
 
-main{
-    width: 300px;
+ main{ 
+     width: 700px; 
     margin: 0 auto;
     text-align: center;
-    border: 2px solid #000;
+    border: 1px solid rgb(161, 30, 30);
 }
 
 #descricao{
@@ -20,28 +21,46 @@ main{
 
 span{
     font-size: 11px;
-    color: #000;
+    color: rgb(124, 21, 21);
     padding: -10px;
 }
 
 p{
-    font-size: 18px;
-    color: #000;
+    font-size: 22px;
+    color: rgb(44, 15, 139);
     margin-top: 2px;
+    width: 40%;
+    background-color: aquamarine;
 }
 
-form{
+ form{ 
     padding: 10px;
     font-size: 28px;
+    color: firebrick;
 }
 
-input{
+ input{ 
     padding: 5px;
     font-size: 20px;
-    width: 80%;
+    width: 40%;
     margin-top: 10px;
 }
 
 img{
     width: 200px;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkgoldenrod;
+    font-style: italic;
+    width: 40%;
+    background-color: lightsteelblue;
+}
+
+h3{
+    color: rgb(7, 1, 1);
+    font-family: sans-serif;
+    width: 40%;
+  background-color: rgb(228, 21, 21);
 }
