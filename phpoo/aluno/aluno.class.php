@@ -99,28 +99,19 @@ public function setestado ($estado){
 
 
 public function aniversario(){
-    $data=$this->getdatadenascimento();//12/05/198
+    $data=$this->getdatadenascimento ();//12/05/1982
 
-list($dia,$mes,$ano)= explode('-',$this->datadenascimento);
-$hoje=mktime(0,0,0, date('m'),date('d'),date('Y'));
-$nascimento=mktime(0,0,0, $mes,$dia,$ano);
-$idade=floor((((($hoje-$nascimento)/60)/60)/24)/365.25);
+list($dia,$mes,$ano)= explode('/',$data);
 
 if(date('m')==$mes and date('d')==$dia){
-    $niver="Parabéns, hoje é o seu aniversário!";
+    echo "Parabéns, hoje é o seu aniversário!";
+     
 
 }else{
-    $niver=" ";
+    $niver="";
 }
 }
 }
-
-
-
-
-
-
-
 
 
 
