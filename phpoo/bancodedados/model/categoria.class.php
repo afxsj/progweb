@@ -1,33 +1,36 @@
 <?php
-class categoria{
+class Categoria {
+
+    // ATRIBUTOS
     private $id_categoria;
     private $nome;
+   
 
-    function __construct($p1,$p2){
-        $this->setid_categoria($p1);
-        $this->setnome($p2);
+    // MÉTODO CONSTRUTOR
+    function __construct($p1,$p2) {
+
+        $this->setId_categoria($p1);
+        $this->setNome($p2);
 
         return $this;
-
     }
 
-    public function getid_categoria(){
+    // MÉTODOS GETTERS E SETTERS
+    
+    public function getId_categoria(){
         return $this->id_categoria;
     }
 
-    public function getnome(){
+    public function setId_categoria($id_categoria){
+        $this->id_categoria = $id_categoria;
+    }
+
+    public function getNome(){
         return $this->nome;
     }
 
-    public function setnome($nome){
+    public function setNome($nome){
         $this->nome = $nome;
     }
-
-    public function setid_categoria($id_categoria){
-        $this->id_categoria = $id_categoria;
-
 }
-}
-
-
 ?>
